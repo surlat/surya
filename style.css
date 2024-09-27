@@ -25,7 +25,7 @@
             margin-bottom: 15px; /* Mengatur jarak di bawah paragraf */
         }
         ul {
-            padding-left: 20px; /* Jarak dari sisi kiri */
+            padding-left:0px; /* Jarak dari sisi kiri */
             margin: 0; /* Menghapus margin default */
         }
         li {
