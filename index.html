@@ -6,7 +6,7 @@
     <title>Perpustakaan UMA</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
-       body {
+        body {
             background-image: url("picture/fuyt5.jpg");
             background-size: cover;
             color: black;
@@ -14,27 +14,25 @@
             line-height: 1.6;
             margin: 20px;
         }
-        }
         .jumbotron h1 {
             font-size: 40px;
             text-decoration: underline;
-            background-image: url("picture/front-view-pile-books-with-copy-space.jpg"); /* Ganti dengan path gambar Anda */
-            background-size: cover; /* Mengatur ukuran gambar agar menutupi area */
-            background-position: center; /* Memposisikan gambar di tengah */
-            color: white; /* Mengubah warna teks */
+            background-image: url("picture/front-view-pile-books-with-copy-space.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
             padding: 10px;
             border-radius: 5px;
         }
         .navbar-brand img {
-            max-height: 40px; /* Ukuran logo */
-            margin-top: -10px; /* Penyesuaian vertikal */
+            max-height: 40px;
+            margin-top: -10px;
         }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
-            <!-- Logo -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">
                     <img src="picture/LOGO_UMA.png" alt="Logo">
@@ -45,214 +43,203 @@
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Layanan <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Peminjaman Buku</a></li>
-                        <li><a href="#">Pengembalian Buku</a></li>
-                        <li><a href="#">Perpanjangan Peminjaman</a></li>
-                        <li><a href="#">Informasi Anggota</a></li>
+                        <li><a href="#form-pemesanan">Pemesanan Buku</a></li>
+                        <li><a href="#form-perpanjangan">Perpanjangan Peminjaman</a></li>
+                        <li><a href="#form-anggota">Anggota Perpustakaan</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#tentang-kami">Tentang Kami</a></li>
             </ul>
         </div>
     </nav>
 
-     <div class="jumbotron">
-        <h1>
-            SELAMAT DATANG    
-        </h1>
+    <div class="jumbotron">
+        <h1>SELAMAT DATANG</h1>
     </div>
+
     <div class="container">
-        <h2>Perkenalkan nama saya Surya Manulang dengan NIM 222201024. Ini adalah home page pertama saya, saya baru belajar membuat website. Berikut adalah gambar dari perpustakaan Universitas Medan Area.</h2>
-        <p>Terima Kasih</p>
-    <h3><center>Berikut ini adalah gambar dari gedung Perpustakaan UMA.</center></h3>
-    <h4><center><img src="https://uma.ac.id/asset/foto_statis/perpustakaan-uma.JPG" alt="Perpustakaan UMA"></center></h4>
-    <p><center><i>Perpustakaan UMA</i></center></p>
-    
-    <center>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VNnEdT5eKw0?si=j8-yDd8M9oHz9BJK" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-        <p>
+        <h2>Perkenalan</h2>
+        <p>Perkenalkan nama saya Surya Manulang dengan NIM 222201024. Ini adalah home page pertama saya, saya baru belajar membuat website. Berikut adalah gambar dari perpustakaan Universitas Medan Area.</p>
+        
+        <h3 class="text-center">Gambar Gedung Perpustakaan UMA</h3>
+        <div class="text-center">
+            <img src="https://uma.ac.id/asset/foto_statis/perpustakaan-uma.JPG" alt="Perpustakaan UMA" class="img-responsive center-block">
+            <p><i>Perpustakaan UMA</i></p>
+        </div>
+
+        <h3 class="text-center">Video Mengenai Perpustakaan</h3>
+        <div class="text-center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VNnEdT5eKw0?si=j8-yDd8M9oHz9BJK" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <h3 class="text-center">Musik Latar</h3>
+        <div class="text-center">
             <audio controls>
                 <source src="music/Lord Huron - The Night We Met (Official Audio).mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
             </audio>
-        </p>
+        </div>
 
-        <section>
-            <h1>Pengertian HTML</h1>
-            <p>HTML (HyperText Markup Language) adalah bahasa markup standar untuk membuat halaman web...</p>
-            <h2>Fungsi HTML</h2>
-            <ul>
-                <li><strong>Struktur Halaman Web:</strong> Mengatur konten dengan tag seperti <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, dan <code>&lt;ul&gt;</code>.</li>
-                <li><strong>Pengaturan Elemen:</strong> Memasukkan gambar, video, dan audio.</li>
-                <li><strong>Tautan dan Navigasi:</strong> Membuat tautan antar halaman dengan tag <code>&lt;a&gt;</code>.</li>
-                <li><strong>Format Teks:</strong> Memformat teks menggunakan tag seperti <code>&lt;b&gt;</code> dan <code>&lt;i&gt;</code>.</li>
-                <li><strong>Formulir Interaktif:</strong> Membuat formulir untuk input data pengguna.</li>
-                <li><strong>Integrasi dengan CSS dan JavaScript:</strong> Bekerja sama untuk penataan dan interaktivitas.</li>
-            </ul>
+        <section id="form-pemesanan">
+            <h2>Pemesanan Buku</h2>
+            <form>
+                <table class="table">
+                    <tr>
+                        <td>Nama Lengkap:</td>
+                        <td><input type="text" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Anggota Perpustakaan:</td>
+                        <td><input type="password" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>e-mail:</td>
+                        <td><input type="email" class="form-control" name="email" placeholder="@gmail.com" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Telepon:</td>
+                        <td><input type="number" class="form-control" name="Nomor Telepon" placeholder="+62..." /></td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin:</td>
+                        <td>
+                            <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
+                            <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Detail Pemesanan</th>
+                    </tr>
+                    <tr>
+                        <td>Judul Buku Yang Dipesan:</td>
+                        <td><input type="text" class="form-control" name="Judul Buku" /></td>
+                    </tr>
+                    <tr>
+                        <td>Penulis Buku:</td>
+                        <td><input type="text" class="form-control" name="Penulis Buku" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor ISBN:</td>
+                        <td><input type="number" class="form-control" name="Nomor ISBN" /></td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Pemesanan:</td>
+                        <td><input type="date" class="form-control" name="Tanggal Pemesanan" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" class="btn btn-primary" name="submit" value="Kirim" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
         </section>
-        <section>
-            <h1>Fungsi CSS</h1>
-            <p>CSS (Cascading Style Sheets) memiliki beberapa fungsi utama dalam pengembangan web, antara lain:</p>
-            <ul>
-                <li><strong>Penataan Visual:</strong> Mengatur tampilan elemen, seperti warna dan ukuran font.</li>
-                <li><strong>Layout:</strong> Menyusun elemen dalam halaman dengan cara yang teratur.</li>
-                <li><strong>Responsivitas:</strong> Membuat desain yang menyesuaikan dengan ukuran layar perangkat.</li>
-                <li><strong>Membuat Animasi:</strong> Menambahkan efek animasi pada elemen web.</li>
-                <li><strong>Mendukung Keterbacaan:</strong> Meningkatkan keterbacaan konten dengan mengatur gaya teks.</li>
-                <li><strong>Keterpisahan Konten dan Presentasi:</strong> Memudahkan pemeliharaan dengan memisahkan HTML dari gaya.</li>
-                <li><strong>Customisasi:</strong> Mengkustomisasi elemen web untuk desain yang unik.</li>
-            </ul>
+
+        <section id="form-perpanjangan">
+            <h2>Perpanjangan Peminjaman Buku</h2>
+            <form>
+                <table class="table">
+                    <tr>
+                        <td>Nama Lengkap:</td>
+                        <td><input type="text" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Anggota Perpustakaan:</td>
+                        <td><input type="password" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>e-mail:</td>
+                        <td><input type="email" name="email" class="form-control" placeholder="@gmail.com" /></td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Detail Pemesanan Awal</th>
+                    </tr>
+                    <tr>
+                        <td>Judul Buku Yang Dipesan:</td>
+                        <td><input type="text" name="Judul Buku" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Penulis Buku:</td>
+                        <td><input type="text" name="Penulis Buku" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor ISBN:</td>
+                        <td><input type="number" name="Nomor ISBN" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Perpanjangan Peminjaman Buku</th>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Perpanjangan Peminjaman Buku:</td>
+                        <td><input type="date" name="Tanggal Pemesanan" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Alasan Perpanjangan:</td>
+                        <td><input type="text" name="Alasan Perpanjangan" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" class="btn btn-primary" name="submit" value="Kirim" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
         </section>
-        <h2>Formulir Pemesanan Buku</h2>
-        <form>
-            <table class="table">
-                <tr>
-                    <td>Nama Lengkap:</td>
-                    <td><input type="text" class="form-control" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor Anggota Perpustakaan:</td>
-                    <td><input type="password" class="form-control" /></td>
-                </tr>
-                <tr>
-                    <td>e-mail:</td>
-                    <td><input type="email" class="form-control" name="email" placeholder="@gmail.com" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor Telepon:</td>
-                    <td><input type="number" class="form-control" name="Nomor Telepon" placeholder="+62..." /></td>
-                </tr>
-                <tr>
-                    <td>Jenis Kelamin:</td>
-                    <td>
-                        <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
-                        <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="2">Detail Pemesanan</th>
-                </tr>
-                <tr>
-                    <td>Judul Buku Yang Dipesan:</td>
-                    <td><input type="text" class="form-control" name="Judul Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Penulis Buku:</td>
-                    <td><input type="text" class="form-control" name="Penulis Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor ISBN:</td>
-                    <td><input type="number" class="form-control" name="Nomor ISBN" /></td>
-                </tr>
-                <tr>
-                    <td>Tanggal Pemesanan:</td>
-                    <td><input type="date" class="form-control" name="Tanggal Pemesanan" /></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" class="btn btn-primary" name="submit" value="Kirim" />
-                    </td>
-                </tr>
-            </table>
-        </form>
-       <h2>Formulir Perpanjangan Peminjaman Buku</h2>
-        <form>
-            <table>
-                <tr>
-                    <td>Nama Lengkap:</td>
-                    <td><input type="text" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor Anggota Perpustakaan:</td>
-                    <td><input type="password" /></td>
-                </tr>
-                <tr>
-                    <td>e-mail:</td>
-                    <td><input type="email" name="email" placeholder="@gmail.com" /></td>
-                </tr>
-                <tr>
-                    <th colspan="2">Detail Pemesanan Awal</th>
-                </tr>
-                <tr>
-                    <td>Judul Buku Yang Dipesan:</td>
-                    <td><input type="text" name="Judul Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Penulis Buku:</td>
-                    <td><input type="text" name="Penulis Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor ISBN:</td>
-                    <td><input type="number" name="Nomor ISBN" /></td>
-                </tr>
-                <tr>
-                    <th colspan="2">Perpanjangan Peminjaman Buku</th>
-                </tr>
-                <tr>
-                    <td>Tanggal Perpanjangan Peminjaman Buku:</td>
-                    <td><input type="date" name="Tanggal Perpanjang Peminjaman Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Alasan Perpanjangan:</td>
-                    <td><input type="text" name="Alasan Perpanjangan" /></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" name="submit" value="Kirim" />
-                    </td>
-                </tr>
-            </table>
-        </form>
-        <h2>Formulir Anggota Perpustakaan Program Studi</h2>
-        <form>
-            <table>
-                <tr>
-                    <td>Nama Lengkap:</td>
-                    <td><input type="text" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor Induk Mahasiswa (NIM):</td>
-                    <td><input type="text" name="NIM" /></td>
-                </tr>
-                <tr>
-                    <td>Program Studi:</td>
-                    <td>
-                        <select name="prodi">
-                            <option value="ilmu perpustakaan">Ilmu Perpustakaan</option>
-                            <option value="informatika">Informatika</option>
-                            <option value="manajemen">Manajemen</option>
-                            <option value="akuntansi">Akuntansi</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Fakultas:</td>
-                    <td><input type="text" name="fakultas" /></td>
-                </tr>
-                <tr>
-                    <td>Alamat Rumah:</td>
-                    <td><input type="text" name="alamat" /></td>
-                </tr>
-                <tr>
-                    <td>e-mail:</td>
-                    <td><input type="email" name="email" placeholder="@gmail.com" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor Telepon:</td>
-                    <td><input type="number" name="telepon" placeholder="+62..." /></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" value="Daftar" />
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </center>
-    </h3> 
-    </center>
+
+        <section id="form-anggota">
+            <h2>Anggota Perpustakaan Program Studi</h2>
+            <form>
+                <table class="table">
+                    <tr>
+                        <td>Nama Lengkap:</td>
+                        <td><input type="text" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Induk Mahasiswa (NIM):</td>
+                        <td><input type="text" name="NIM" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Program Studi:</td>
+                        <td>
+                            <select name="prodi" class="form-control">
+                                <option value="ilmu perpustakaan">Ilmu Perpustakaan</option>
+                                <option value="informatika">Informatika</option>
+                                <option value="manajemen">Manajemen</option>
+                                <option value="akuntansi">Akuntansi</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fakultas:</td>
+                        <td><input type="text" name="fakultas" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat Rumah:</td>
+                        <td><input type="text" name="alamat" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>e-mail:</td>
+                        <td><input type="email" name="email" class="form-control" placeholder="@gmail.com" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Telepon:</td>
+                        <td><input type="number" name="telepon" class="form-control" placeholder="+62..." /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" class="btn btn-primary" value="Daftar" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+
+        <footer class="text-center">
+            <p>Terima Kasih</p>
+        </footer>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
-
