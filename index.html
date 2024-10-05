@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>Perpustakaan UMA</title>
-     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Perpustakaan UMA</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-image: url("picture/fuyt5.jpg");
-            background-color: no-repeat; 
             background-size: cover;
             color: black;
-            body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
@@ -20,12 +18,8 @@
             color: brown;
             font-size: 18px;
         }
-
-             body {
-            background-color: #007bff; /* Putih */
-        }
         .jumbotron {
-            background-color: #f8f9fa; /* Biru */
+            background-color: #007bff; /* Biru */
             color: white;
             text-align: center;
         }
@@ -33,76 +27,97 @@
             font-size: 40px;
             text-decoration: underline;
         }
+        .navbar-brand img {
+            max-height: 40px; /* Atur ukuran logo */
+        }
     </style>
-    <link rel="stylesheet" href="style.css">
-</head>
-    <meta charset="UTF-8">
-    
 </head>
 <body>
-  <div class="jumbotron">
-    <h1>Selamat datang di web Surya Manullang</h1>
-</div>
-    <h2> Perkenalkan nama saya Surya Manulang dengan NIM 222201024.Ini adalah home page pertama saya,saya baru belajar membuat website.Berikut adalah gambar dari perpustakaan Universitas Medan Area</h2>
-    <p>  Terima Kasih
- </p>
-    <h3><center><Berikut ini adalah gambar dari gedung Perpustakaan UMA.</h3></center>
-    <h4>
-            <center><img src="https://uma.ac.id/asset/foto_statis/perpustakaan-uma.JPG" alt="Perpustakan UMA"></center>
-    </h4>
-    <p><center><i>Perpustakaan UMA</i></p></center>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img src="path/to/logo.png" alt="Logo"> Perpustakaan UMA
+                </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Layanan <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Peminjaman Buku</a></li>
+                        <li><a href="#">Pengembalian Buku</a></li>
+                        <li><a href="#">Perpanjangan Peminjaman</a></li>
+                        <li><a href="#">Informasi Anggota</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tentang Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <h1>Selamat datang di web Surya Manullang</h1>
+    </div>
+    <h2>Perkenalkan nama saya Surya Manulang dengan NIM 222201024. Ini adalah home page pertama saya, saya baru belajar membuat website. Berikut adalah gambar dari perpustakaan Universitas Medan Area.</h2>
+    <p>Terima Kasih</p>
+    <h3><center>Berikut ini adalah gambar dari gedung Perpustakaan UMA.</center></h3>
+    <h4><center><img src="https://uma.ac.id/asset/foto_statis/perpustakaan-uma.JPG" alt="Perpustakaan UMA"></center></h4>
+    <p><center><i>Perpustakaan UMA</i></center></p>
     
     <center>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VNnEdT5eKw0?si=j8-yDd8M9oHz9BJK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"         </iframe>
-      <p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VNnEdT5eKw0?si=j8-yDd8M9oHz9BJK" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <p>
             <audio controls>
                 <source src="music/Lord Huron - The Night We Met (Official Audio).mp3" type="audio/mpeg">
             </audio>
-        </p>
+        </p>
 
-    <SECTION><h1>Pengertian HTML</h1>
-    <p>HTML (HyperText Markup Language) adalah bahasa markup standar untuk membuat halaman web. HTML digunakan untuk mengatur dan mendefinisikan struktur konten di halaman web, seperti judul, paragraf, dan daftar. Selain itu, HTML memungkinkan penempatan elemen multimedia, tautan antar halaman, dan formulir interaktif.</p>
-    <h2>Fungsi HTML</h2>
-    <ul>
-        <li><strong>Struktur Halaman Web:</strong> Mengatur konten dengan tag seperti <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, dan <code>&lt;ul&gt;</code>.</li>
-        <li><strong>Pengaturan Elemen:</strong> Memasukkan gambar, video, dan audio.</li>
-        <li><strong>Tautan dan Navigasi:</strong> Membuat tautan antar halaman dengan tag <code>&lt;a&gt;</code>.</li>
-        <li><strong>Format Teks:</strong> Memformat teks menggunakan tag seperti <code>&lt;b&gt;</code> dan <code>&lt;i&gt;</code>.</li>
-        <li><strong>Formulir Interaktif:</strong> Membuat formulir untuk input data pengguna.</li>
-        <li><strong>Integrasi dengan CSS dan JavaScript:</strong> Bekerja sama untuk penataan dan interaktivitas.</li>
-    </ul>
-    </SECTION>
         <section>
-        <h1>Fungsi CSS</h1>
-        <p>CSS (Cascading Style Sheets) memiliki beberapa fungsi utama dalam pengembangan web, antara lain:</p>
-        <ul>
-            <li><strong>Penataan Visual:</strong> Mengatur tampilan elemen, seperti warna dan ukuran font.</li>
-            <li><strong>Layout:</strong> Menyusun elemen dalam halaman dengan cara yang teratur.</li>
-            <li><strong>Responsivitas:</strong> Membuat desain yang menyesuaikan dengan ukuran layar perangkat.</li>
-            <li><strong>Membuat Animasi:</strong> Menambahkan efek animasi pada elemen web.</li>
-            <li><strong>Mendukung Keterbacaan:</strong> Meningkatkan keterbacaan konten dengan mengatur gaya teks.</li>
-            <li><strong>Keterpisahan Konten dan Presentasi:</strong> Memudahkan pemeliharaan dengan memisahkan HTML dari gaya.</li>
-            <li><strong>Customisasi:</strong> Mengkustomisasi elemen web untuk desain yang unik.</li>
-        </ul>
-    </section>
+            <h1>Pengertian HTML</h1>
+            <p>HTML (HyperText Markup Language) adalah bahasa markup standar untuk membuat halaman web...</p>
+            <h2>Fungsi HTML</h2>
+            <ul>
+                <li><strong>Struktur Halaman Web:</strong> Mengatur konten dengan tag seperti <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, dan <code>&lt;ul&gt;</code>.</li>
+                <li><strong>Pengaturan Elemen:</strong> Memasukkan gambar, video, dan audio.</li>
+                <li><strong>Tautan dan Navigasi:</strong> Membuat tautan antar halaman dengan tag <code>&lt;a&gt;</code>.</li>
+                <li><strong>Format Teks:</strong> Memformat teks menggunakan tag seperti <code>&lt;b&gt;</code> dan <code>&lt;i&gt;</code>.</li>
+                <li><strong>Formulir Interaktif:</strong> Membuat formulir untuk input data pengguna.</li>
+                <li><strong>Integrasi dengan CSS dan JavaScript:</strong> Bekerja sama untuk penataan dan interaktivitas.</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Fungsi CSS</h1>
+            <p>CSS (Cascading Style Sheets) memiliki beberapa fungsi utama dalam pengembangan web, antara lain:</p>
+            <ul>
+                <li><strong>Penataan Visual:</strong> Mengatur tampilan elemen, seperti warna dan ukuran font.</li>
+                <li><strong>Layout:</strong> Menyusun elemen dalam halaman dengan cara yang teratur.</li>
+                <li><strong>Responsivitas:</strong> Membuat desain yang menyesuaikan dengan ukuran layar perangkat.</li>
+                <li><strong>Membuat Animasi:</strong> Menambahkan efek animasi pada elemen web.</li>
+                <li><strong>Mendukung Keterbacaan:</strong> Meningkatkan keterbacaan konten dengan mengatur gaya teks.</li>
+                <li><strong>Keterpisahan Konten dan Presentasi:</strong> Memudahkan pemeliharaan dengan memisahkan HTML dari gaya.</li>
+                <li><strong>Customisasi:</strong> Mengkustomisasi elemen web untuk desain yang unik.</li>
+            </ul>
+        </section>
         <h2>Formulir Pemesanan Buku</h2>
         <form>
-            <table>
+            <table class="table">
                 <tr>
                     <td>Nama Lengkap:</td>
-                    <td><input type="text" /></td>
+                    <td><input type="text" class="form-control" /></td>
                 </tr>
                 <tr>
-                    <td>Nomor Anggota Perpustkaan:</td>
-                    <td><input type="password" /></td>
+                    <td>Nomor Anggota Perpustakaan:</td>
+                    <td><input type="password" class="form-control" /></td>
                 </tr>
                 <tr>
                     <td>e-mail:</td>
-                    <td><input type="email" name="email" placeholder="@gmail.com" /></td>
+                    <td><input type="email" class="form-control" name="email" placeholder="@gmail.com" /></td>
                 </tr>
                 <tr>
                     <td>Nomor Telepon:</td>
-                    <td><input type="number" name="Nomor Telepon" placeholder="+62..." /></td>
+                    <td><input type="number" class="form-control" name="Nomor Telepon" placeholder="+62..." /></td>
                 </tr>
                 <tr>
                     <td>Jenis Kelamin:</td>
@@ -116,29 +131,28 @@
                 </tr>
                 <tr>
                     <td>Judul Buku Yang Dipesan:</td>
-                    <td><input type="text" name="Judul Buku" /></td>
+                    <td><input type="text" class="form-control" name="Judul Buku" /></td>
                 </tr>
                 <tr>
                     <td>Penulis Buku:</td>
-                    <td><input type="text" name="Penulis Buku" /></td>
+                    <td><input type="text" class="form-control" name="Penulis Buku" /></td>
                 </tr>
                 <tr>
                     <td>Nomor ISBN:</td>
-                    <td><input type="number" name="Nomor ISBN" /></td>
+                    <td><input type="number" class="form-control" name="Nomor ISBN" /></td>
                 </tr>
                 <tr>
                     <td>Tanggal Pemesanan:</td>
-                    <td><input type="date" name="Tanggal Pemesanan" /></td>
+                    <td><input type="date" class="form-control" name="Tanggal Pemesanan" /></td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="submit" name="submit" value="Kirim" />
+                        <input type="submit" class="btn btn-primary" name="submit" value="Kirim" />
                     </td>
                 </tr>
             </table>
         </form>
-    
-        <h2>Formulir Perpanjangan Peminjaman Buku</h2>
+       <h2>Formulir Perpanjangan Peminjaman Buku</h2>
         <form>
             <table>
                 <tr>
@@ -233,8 +247,10 @@
         </form>
     </center>
     </h3> 
+    </center>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+
