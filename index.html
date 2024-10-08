@@ -55,6 +55,19 @@
             margin-left: auto; 
         }
 
+        .book-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .book-item img {
+            width: 100px; 
+            height: 150px;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
         .details-btn:hover {
             background-color: #0056b3;
             transform: translateY(-2px); 
@@ -387,27 +400,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script> 
 
-    <script>
-  const bookDetails = [
+   <script>
+    const bookDetails = [
         {
-            title: "10 Langkah Mencerdaskan Kota",
-            detail: "Ditulis oleh Sutriadi, diterbitkan oleh ITB Press pada tahun 2018. Panduan tentang strategi untuk mencerdaskan kota."
+            title: "10 sikap positif menghadapi kesulitan hidup",
+            detail: "Ditulis oleh Qowiy, AA. Penerbit: Remaja Rosda Karya, Tahun Terbit: 2005, ISBN: 979-692-118-9, Jumlah Halaman: 236."
         },
         {
-            title: "Melangkah",
-            detail: "Ditulis oleh JS Khairen, diterbitkan oleh Gramedia Widiasarana Indonesia pada tahun 2020. Sebuah buku motivasi untuk memulai langkah baru."
+            title: "101 cara pelatihan & pembelajaran aktif, Ed.2",
+            detail: "Ditulis oleh Silberman, Mel. Penerbit: PT Indeks, Tahun Terbit: 2010, ISBN: 979-062-200-7, Jumlah Halaman: 303."
         },
         {
-            title: "Ilmu Jalanan",
-            detail: "Ditulis oleh Rico Tampenawas, diterbitkan oleh Elex Media Komputindo pada tahun 2018. Membahas pengetahuan yang diperoleh dari pengalaman hidup."
+            title: "14 bab dan dalil dasar filsafat praktis",
+            detail: "Ditulis oleh Halim, A. Ridwan. Penerbit: Ghalia Indonesia, Tahun Terbit: 1983, ISBN: Tidak tersedia, Jumlah Halaman: 96."
         },
         {
-            title: "Mengenal Diri Sendiri",
-            detail: "Ditulis oleh Eka Silvana, diterbitkan oleh Anak Hebat Indonesia pada tahun 2023. Buku ini membahas pentingnya mengenali diri sendiri."
+            title: "40 Hari Mencari: ilmu refleksi personal atas 'bagaimana aku belajar?'",
+            detail: "Ditulis oleh Hernowo. Penerbit: Mitra Wacana, Tahun Terbit: 2004, ISBN: 979-3611-01-4, Jumlah Halaman: 96."
         },
         {
-            title: "Outliers (Rahasia di balik kesuksesan)",
-            detail: "Ditulis oleh Malcolm Gladwell, diterbitkan oleh Gramedia Pustaka Utama pada tahun 2020. Buku ini menjelaskan faktor-faktor yang berkontribusi pada kesuksesan."
+            title: "201 Pertanyaan Terbaik Untuk Wawancara Kerja",
+            detail: "Ditulis oleh Kador, John. Penerbit: Anderson, Tahun Terbit: 2004, ISBN: 979-731-095-7, Jumlah Halaman: 280."
         }
     ];
 
@@ -425,7 +438,7 @@
             }
         });
     });
-        
 </script>
+
 </body>
 </html>
