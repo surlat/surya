@@ -321,6 +321,39 @@
         </tbody>
     </table>
 
+        <div class="container">
+    <h3>Pameran Buku</h3>
+    <ul id="book-list" class="list-unstyled">
+        <li class="book-item">
+            <img src="picture/download (5).jpeg" alt="10 Langkah Mencerdaskan Kota">
+            <span>"10 sikap positif menghadapi kesulitan hidup"</span>
+            <button class="details-btn" data-index="0">Detail</button>
+        </li>
+        <li class="book-item">
+            <img src="picture/download (6).jpeg" alt="Melangkah">
+            <span>"101 cara pelatihan & pembelajaran aktif, Ed.2"</span>
+            <button class="details-btn" data-index="1">Detail</button>
+        </li>
+        <li class="book-item">
+            <img src="picture/download (7).jpeg" alt="Ilmu Jalanan">
+            <span>"14 bab dan dalil dasar filsafat praktis"</span>
+            <button class="details-btn" data-index="2">Detail</button>
+        </li>
+        <li class="book-item">
+            <img src="picture/download (8).jpeg" alt="Mengenal Diri Sendiri">
+            <span>"40 Hari Mencari : ilmu refleksi personal atas "bagaimana aku belajar?""</span>
+            <button class="details-btn" data-index="3">Detail</button>
+        </li>
+        <li class="book-item">
+            <img src="picture/download.png" alt="Outliers">
+            <span>"201 Pertanyaan Terbaik Untuk Wawancara Kerja"</span>
+            <button class="details-btn" data-index="4">Detail</button>
+        </li>
+    </ul>
+    
+    <div id="book-detail"></div>
+</div>
+
         <footer class="text-center">
             <p>Terima Kasih</p>
         </footer>
@@ -330,7 +363,43 @@
     <script src="js/bootstrap.min.js"></script> 
 
     <script>
-  
+  const bookDetails = [
+        {
+            title: "10 Langkah Mencerdaskan Kota",
+            detail: "Ditulis oleh Sutriadi, diterbitkan oleh ITB Press pada tahun 2018. Panduan tentang strategi untuk mencerdaskan kota."
+        },
+        {
+            title: "Melangkah",
+            detail: "Ditulis oleh JS Khairen, diterbitkan oleh Gramedia Widiasarana Indonesia pada tahun 2020. Sebuah buku motivasi untuk memulai langkah baru."
+        },
+        {
+            title: "Ilmu Jalanan",
+            detail: "Ditulis oleh Rico Tampenawas, diterbitkan oleh Elex Media Komputindo pada tahun 2018. Membahas pengetahuan yang diperoleh dari pengalaman hidup."
+        },
+        {
+            title: "Mengenal Diri Sendiri",
+            detail: "Ditulis oleh Eka Silvana, diterbitkan oleh Anak Hebat Indonesia pada tahun 2023. Buku ini membahas pentingnya mengenali diri sendiri."
+        },
+        {
+            title: "Outliers (Rahasia di balik kesuksesan)",
+            detail: "Ditulis oleh Malcolm Gladwell, diterbitkan oleh Gramedia Pustaka Utama pada tahun 2020. Buku ini menjelaskan faktor-faktor yang berkontribusi pada kesuksesan."
+        }
+    ];
+
+    const detailButtons = document.querySelectorAll('.details-btn');
+
+    detailButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const index = this.getAttribute('data-index'); 
+            const detailDiv = document.getElementById('book-detail');
+
+            if (bookDetails[index]) {
+                detailDiv.innerHTML = `<h4>Detail Buku:</h4><p>${bookDetails[index].detail}</p>`;
+            } else {
+                detailDiv.innerHTML = `<p>Detail untuk buku ini tidak tersedia.</p>`;
+            }
+        });
+    });
         
 </script>
 </body>
