@@ -59,6 +59,7 @@
                         <li><a href="#form-pemesanan">Pemesanan Buku</a></li>
                         <li><a href="#form-perpanjangan">Perpanjangan Peminjaman</a></li>
                         <li><a href="#form-anggota">Anggota Perpustakaan</a></li>
+                        <li><a href="#form-tabel">Tabel Bahan Buku</a></li>
                     </ul>
                 </li>
                 <li><a href="#tentang-kami">Tentang Kami</a></li>
@@ -79,11 +80,6 @@
     <label><input type="radio" name="membership" value="regular"> Regular Member</label>
     <label><input type="radio" name="membership" value="premium"> Premium Member</label>
     <button onclick="calculateMaxBooks()" class="btn btn-primary">Check Max Books</button>
-</section>
-
-<section id="bookOptions">
-    <h2>Available Books</h2>
-    <!-- Book options will be displayed here -->
 </section>
         
      <section id="tentang-kami">
@@ -107,16 +103,7 @@
             </div>
         </section>
 
-        <section id="pameran-buku">
-    <h2>Pameran Buku</h2>
-    <p>Kami mengadakan pameran buku setiap bulan. Untuk informasi lebih lanjut, klik tombol di bawah ini.</p>
-    <button id="showExhibitionDetails" class="btn btn-info">Lihat Detail Pameran</button>
-    <div id="exhibitionDetails" style="display:none; margin-top: 20px;">
-        <h3>Detail Pameran Buku</h3>
-        <p>Tanggal: 20-22 Oktober 2024</p>
-        <p>Lokasi: Aula Perpustakaan UMA</p>
-        <p>Jadwal: 09:00 - 17:00 WIB</p>
-    </div>
+        
 </section>
 
         <section id="form-pemesanan">
@@ -272,6 +259,67 @@
                 </table>
             </form>
         </section>
+         <h2 id="tabel-buku" class="text-center mt-5 mb-4">Tabel Bahan Buku</h2>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Judul Buku</th>
+                <th>Pengarang</th>
+                <th>Penerbit</th>
+                <th>Tahun Terbit</th>
+                <th>Jumlah Halaman</th>
+                <th>ISBN</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>"10 sikap positif menghadapi kesulitan hidup"</td>
+                <td>Qowiy, AA.</td>
+                <td>Remaja Rosda Karya</td>
+                <td>2005</td>
+                <td>236</td>
+                <td>979-692-118-9</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>"101 cara pelatihan & pembelajaran aktif, Ed.2"</td>
+                <td>Silberman, Mel</td>
+                <td>PT Indeks</td>
+                <td>2010</td>
+                <td>303</td>
+                <td>979-062-200-7</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>"14 bab dan dalil dasar filsafat praktis"</td>
+                <td>Halim, A. Ridwan</td>
+                <td>Ghalia Indonesia</td>
+                <td>1983</td>
+                <td>96</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>"40 Hari Mencari : ilmu refleksi personal atas "bagaimana aku belajar?""</td>
+                <td>Hernowo</td>
+                <td>Mitra Wacana</td>
+                <td>2004</td>
+                <td>96</td>
+                <td>979-3611-01-4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>"201 Pertanyaan Terbaik Untuk Wawancara Kerja"</td>
+                <td>Kador, John</td>
+                <td>Anderson</td>
+                <td>2004</td>
+                <td>280</td>
+                <td>979-731-095-7</td>
+            </tr>
+        </tbody>
+    </table>
 
         <footer class="text-center">
             <p>Terima Kasih</p>
@@ -282,54 +330,7 @@
     <script src="js/bootstrap.min.js"></script> 
 
     <script>
-    let regularMemberMax = 5;
-    let premiumMemberMax = 10;
-
-    function calculateMaxBooks() {
-        let membershipType = document.querySelector('input[name="membership"]:checked');
-
-        if (!membershipType) {
-            alert("Please select a membership type.");
-            return;
-        }
-
-    
-        let maxBooks;
-        if (membershipType.value === "regular") {
-            maxBooks = regularMemberMax;
-        } else if (membershipType.value === "premium") {
-            maxBooks = premiumMemberMax;
-        } else {
-            maxBooks = 0;
-        }
-
-        alert("You can borrow up to " + maxBooks + " books.");
-    }
-
-    function displayBooks() {
-        const books = ["JavaScript for Beginners", "Mastering Python", "HTML & CSS: Design and Build Websites"];
-        let bookList = "<ul>";
-
-        for (let i = 0; i < books.length; i++) {
-            bookList += "<li>" + books[i] + "</li>";
-        }
-
-        bookList += "</ul>";
-        document.getElementById("bookOptions").innerHTML = bookList;
-    }
-
-    window.onload = function() {
-        displayBooks();
-    }  
-
-    document.getElementById("showExhibitionDetails").addEventListener("click", function() {
-    const exhibitionDetails = document.getElementById("exhibitionDetails");
-    if (exhibitionDetails.style.display === "none") {
-        exhibitionDetails.style.display = "block"; // Tampilkan detail pameran
-    } else {
-        exhibitionDetails.style.display = "none"; // Sembunyikan detail pameran
-    }
-});
+  
         
 </script>
 </body>
