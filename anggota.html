@@ -30,7 +30,51 @@
 
     <div class="container">
         <h2>Data Anggota Perpustakaan</h2>
-        <p>Informasi anggota perpustakaan akan ditampilkan di sini.</p>
+        <h2>Anggota Perpustakaan Program Studi</h2>
+            <form>
+                <table class="table">
+                    <tr>
+                        <td>Nama Lengkap:</td>
+                        <td><input type="text" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Induk Mahasiswa (NIM):</td>
+                        <td><input type="text" name="NIM" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Program Studi:</td>
+                        <td>
+                            <select name="prodi" class="form-control">
+                                <option value="ilmu perpustakaan">Ilmu Perpustakaan</option>
+                                <option value="informatika">Informatika</option>
+                                <option value="manajemen">Manajemen</option>
+                                <option value="akuntansi">Akuntansi</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fakultas:</td>
+                        <td><input type="text" name="fakultas" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat Rumah:</td>
+                        <td><input type="text" name="alamat" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>e-mail:</td>
+                        <td><input type="email" name="email" class="form-control" placeholder="@gmail.com" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Telepon:</td>
+                        <td><input type="number" name="telepon" class="form-control" placeholder="+62..." /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" class="btn btn-primary" value="Daftar" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
     </div>
 
     <footer class="text-center">
