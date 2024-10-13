@@ -1,92 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Perpustakaan UMA - Pemesanan Buku</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-image: url("picture/fuyt5.jpg");
-            background-size: cover;
-            color: black;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        .container {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-        footer {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h2>Pemesanan Buku</h2>
-        <form>
-            <table class="table">
-                <tr>
-                    <td>Nama Lengkap:</td>
-                    <td><input type="text" class="form-control" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor Anggota Perpustakaan:</td>
-                    <td><input type="password" class="form-control" /></td>
-                </tr>
-                <tr>
-                    <td>e-mail:</td>
-                    <td><input type="email" class="form-control" name="email" placeholder="@gmail.com" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor Telepon:</td>
-                    <td><input type="number" class="form-control" name="Nomor Telepon" placeholder="+62..." /></td>
-                </tr>
-                <tr>
-                    <td>Jenis Kelamin:</td>
-                    <td>
-                        <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
-                        <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="2">Detail Pemesanan</th>
-                </tr>
-                <tr>
-                    <td>Judul Buku Yang Dipesan:</td>
-                    <td><input type="text" class="form-control" name="Judul Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Penulis Buku:</td>
-                    <td><input type="text" class="form-control" name="Penulis Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor ISBN:</td>
-                    <td><input type="number" class="form-control" name="Nomor ISBN" /></td>
-                </tr>
-                <tr>
-                    <td>Tanggal Pemesanan:</td>
-                    <td><input type="date" class="form-control" name="Tanggal Pemesanan" /></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" class="btn btn-primary" name="submit" value="Kirim" />
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
+<div class="container">
+    <h2>Pemesanan Buku</h2>
+    <form>
+        <table class="table">
+            <tr>
+                <td>Nama Lengkap:</td>
+                <td><input type="text" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>Nomor Anggota Perpustakaan:</td>
+                <td><input type="password" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>e-mail:</td>
+                <td><input type="email" class="form-control" name="email" placeholder="@gmail.com" /></td>
+            </tr>
+            <tr>
+                <td>Nomor Telepon:</td>
+                <td><input type="number" class="form-control" name="Nomor Telepon" placeholder="+62..." /></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin:</td>
+                <td>
+                    <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
+                    <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">Detail Pemesanan</th>
+            </tr>
+            <tr>
+                <td>Judul Buku Yang Dipesan:</td>
+                <td><input type="text" class="form-control" name="Judul Buku" /></td>
+            </tr>
+            <tr>
+                <td>Penulis Buku:</td>
+                <td><input type="text" class="form-control" name="Penulis Buku" /></td>
+            </tr>
+            <tr>
+                <td>Nomor ISBN:</td>
+                <td><input type="number" class="form-control" name="Nomor ISBN" /></td>
+            </tr>
+            <tr>
+                <td>Tanggal Pemesanan:</td>
+                <td><input type="date" class="form-control" name="Tanggal Pemesanan" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" class="btn btn-primary" name="submit" value="Kirim" />
+                </td>
+            </tr>
+        </table>
+    </form>
 
-    <footer class="text-center">
-        <p>Terima Kasih</p>
-    </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+    <h3>Daftar Bahan Buku</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Judul Buku</th>
+                <th>Penulis</th>
+                <th>ISBN</th>
+                <th>Tersedia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Contoh Buku 1</td>
+                <td>Penulis A</td>
+                <td>1234567890123</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Contoh Buku 2</td>
+                <td>Penulis B</td>
+                <td>9876543210987</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Contoh Buku 3</td>
+                <td>Penulis C</td>
+                <td>1231231231231</td>
+                <td>2</td>
+            </tr>
+            <!-- Tambahkan lebih banyak baris sesuai kebutuhan -->
+        </tbody>
+    </table>
+</div>
