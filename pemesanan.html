@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perpustakaan UMA - Pemesanan Buku</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("picture/fuyt5.jpg");
+            background-size: cover;
+            color: black;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <img src="picture/LOGO_UMA.png" alt="Logo">
+                </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="pemesanan.html">Pemesanan Buku</a></li>
+                <li><a href="perpanjangan.html">Perpanjangan Peminjaman</a></li>
+                <li><a href="anggota.html">Anggota Perpustakaan</a></li>
+                <li><a href="tentang-kami.html">Tentang Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Pemesanan Buku</h2>
+        <form>
+            <table class="table">
+                <tr>
+                    <td>Nama Lengkap:</td>
+                    <td><input type="text" class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td>Nomor Anggota Perpustakaan:</td>
+                    <td><input type="password" class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td>e-mail:</td>
+                    <td><input type="email" class="form-control" name="email" placeholder="@gmail.com" /></td>
+                </tr>
+                <tr>
+                    <td>Nomor Telepon:</td>
+                    <td><input type="number" class="form-control" name="Nomor Telepon" placeholder="+62..." /></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin:</td>
+                    <td>
+                        <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
+                        <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">Detail Pemesanan</th>
+                </tr>
+                <tr>
+                    <td>Judul Buku Yang Dipesan:</td>
+                    <td><input type="text" class="form-control" name="Judul Buku" /></td>
+                </tr>
+                <tr>
+                    <td>Penulis Buku:</td>
+                    <td><input type="text" class="form-control" name="Penulis Buku" /></td>
+                </tr>
+                <tr>
+                    <td>Nomor ISBN:</td>
+                    <td><input type="number" class="form-control" name="Nomor ISBN" /></td>
+                </tr>
+                <tr>
+                    <td>Tanggal Pemesanan:</td>
+                    <td><input type="date" class="form-control" name="Tanggal Pemesanan" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" class="btn btn-primary" name="submit" value="Kirim" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <footer class="text-center">
+        <p>Terima Kasih</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
