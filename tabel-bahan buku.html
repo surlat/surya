@@ -120,4 +120,48 @@
     </ul>
     
     <div id="book-detail"></div>
-</div>
+</div> 
+    <script src="js/bootstrap.min.js"></script> 
+
+   <script>
+    const bookDetails = [
+        {
+            title: "10 sikap positif menghadapi kesulitan hidup",
+            detail: "Ditulis oleh Qowiy, AA. Penerbit: Remaja Rosda Karya, Tahun Terbit: 2005, ISBN: 979-692-118-9, Jumlah Halaman: 236."
+        },
+        {
+            title: "101 cara pelatihan & pembelajaran aktif, Ed.2",
+            detail: "Ditulis oleh Silberman, Mel. Penerbit: PT Indeks, Tahun Terbit: 2010, ISBN: 979-062-200-7, Jumlah Halaman: 303."
+        },
+        {
+            title: "14 bab dan dalil dasar filsafat praktis",
+            detail: "Ditulis oleh Halim, A. Ridwan. Penerbit: Ghalia Indonesia, Tahun Terbit: 1983, ISBN: Tidak tersedia, Jumlah Halaman: 96."
+        },
+        {
+            title: "40 Hari Mencari: ilmu refleksi personal atas 'bagaimana aku belajar?'",
+            detail: "Ditulis oleh Hernowo. Penerbit: Mitra Wacana, Tahun Terbit: 2004, ISBN: 979-3611-01-4, Jumlah Halaman: 96."
+        },
+        {
+            title: "201 Pertanyaan Terbaik Untuk Wawancara Kerja",
+            detail: "Ditulis oleh Kador, John. Penerbit: Anderson, Tahun Terbit: 2004, ISBN: 979-731-095-7, Jumlah Halaman: 280."
+        }
+    ];
+
+    const detailButtons = document.querySelectorAll('.details-btn');
+
+    detailButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const index = this.getAttribute('data-index'); 
+            const detailDiv = document.getElementById('book-detail');
+
+            if (bookDetails[index]) {
+                detailDiv.innerHTML = `<h4>Detail Buku:</h4><p>${bookDetails[index].detail}</p>`;
+            } else {
+                detailDiv.innerHTML = `<p>Detail untuk buku ini tidak tersedia.</p>`;
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
