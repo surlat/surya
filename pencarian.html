@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencarian Buku</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        #results div {
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+        }
+        #results img {
+            width: 50px; 
+            height: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pencarian Buku</h1>
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Cari buku..." required>
+        <button type="submit">Cari</button>
+    </form>
+    <div id="results"></div>
+
+    <script>
+        const books = [
+            { title: "10 sikap positif menghadapi kesulitan hidup", author: "Qowiy, AA.", image: "picture/download (9).jpeg" },
+            { title: "101 cara pelatihan & pembelajaran aktif, Ed.2", author: "Silberman", image: "picture/download (10).jpeg" },
+            { title: "14 bab dan dalil dasar filsafat praktis", author: "Halim, A. Ridwan", image: "picture/createthumb.jpeg" },
+            { title: "40 Hari Mencari : ilmu refleksi personal atas (bagaimana aku belajar?)", author: "Hernowo", image: "picture/download (11).jpeg" },
+            { title: "201 Pertanyaan Terbaik Untuk Wawancara Kerja", author: "Kador, John.", image: "picture/download (12).jpeg" }
+        ];
+
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const results = books.filter(book => book.title.toLowerCase().includes(query));
+            
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+
+            if (results.length > 0) {
+                results.forEach(book => {
+                    const bookDiv = document.createElement('div');
+                    
+                    const img = document.createElement('img');
+                    img.src = book.image; 
+                    
+                    bookDiv.textContent = `${book.title} oleh ${book.author}`;
+                    bookDiv.prepend(img); 
+                    resultsDiv.appendChild(bookDiv);
+                });
+            } else {
+                resultsDiv.textContent = 'Tidak ada buku yang ditemukan.';
+            }
+        });
+    </script>
+</body>
+</html>
