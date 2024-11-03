@@ -18,13 +18,37 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h1 {
+            color: #0056b3; /* Warna biru gelap */
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #0056b3; /* Border biru */
+            border-radius: 5px;
+            width: 70%;
+            max-width: 300px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff; /* Warna biru cerah */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3; /* Biru gelap saat hover */
         }
         footer {
             margin-top: 20px;
             font-weight: bold;
-        }
-        form {
-            margin-bottom: 20px;
         }
         #results div {
             margin: 5px 0;
@@ -42,11 +66,11 @@
 </head>
 <body>
     <div class="container">
-    <h1>Pencarian Buku</h1>
-    <form id="searchForm">
-        <input type="text" id="searchInput" placeholder="Cari buku..." required>
-        <button type="submit">Cari</button>
-    </form>
+        <h1>Pencarian Buku</h1>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Cari buku..." required>
+            <button type="submit">Cari</button>
+        </form>
     </div>
     <div id="results"></div>
 
