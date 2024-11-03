@@ -21,14 +21,14 @@
             text-align: center;
         }
         h1 {
-            color: #0056b3; /* Warna biru gelap */
+            color: #0056b3; 
         }
         form {
             margin-bottom: 20px;
         }
         input[type="text"] {
             padding: 10px;
-            border: 2px solid #0056b3; /* Border biru */
+            border: 2px solid #0056b3; 
             border-radius: 5px;
             width: 70%;
             max-width: 300px;
@@ -36,7 +36,7 @@
         }
         button {
             padding: 10px 15px;
-            background-color: #007bff; /* Warna biru cerah */
+            background-color: #007bff; 
             color: white;
             border: none;
             border-radius: 5px;
@@ -44,7 +44,7 @@
             font-size: 16px;
         }
         button:hover {
-            background-color: #0056b3; /* Biru gelap saat hover */
+            background-color: #0056b3; 
         }
         footer {
             margin-top: 20px;
@@ -63,6 +63,7 @@
             margin-right: 10px;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -83,28 +84,23 @@
             { title: "201 Pertanyaan Terbaik Untuk Wawancara Kerja", author: "Kador, John.", image: "picture/download (12).jpeg" }
         ];
 
-        document.getElementById('searchForm').addEventListener('submit', function(event) {
+        $('#searchForm').on('submit', function(event) {
             event.preventDefault();
             
-            const query = document.getElementById('searchInput').value.toLowerCase();
+            const query = $('#searchInput').val().toLowerCase();
             const results = books.filter(book => book.title.toLowerCase().includes(query));
             
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = '';
+            $('#results').empty();
 
             if (results.length > 0) {
                 results.forEach(book => {
-                    const bookDiv = document.createElement('div');
-                    
-                    const img = document.createElement('img');
-                    img.src = book.image; 
-                    
-                    bookDiv.textContent = `${book.title} oleh ${book.author}`;
-                    bookDiv.prepend(img); 
-                    resultsDiv.appendChild(bookDiv);
+                    const bookDiv = $('<div></div>');
+                    const img = $('<img>').attr('src', book.image);
+                    bookDiv.text(`${book.title} oleh ${book.author}`).prepend(img);
+                    $('#results').append(bookDiv);
                 });
             } else {
-                resultsDiv.textContent = 'Tidak ada buku yang ditemukan.';
+                $('#results').text('Tidak ada buku yang ditemukan.');
             }
         });
     </script>
