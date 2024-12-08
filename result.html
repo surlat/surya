@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Perhitungan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hasil Perhitungan</h1>
+    <p id="hasil"></p>
+
+    <script>
+        // Ambil parameter dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const bilangan1 = parseFloat(urlParams.get('bilangan1'));
+        const bilangan2 = parseFloat(urlParams.get('bilangan2'));
+        const operator = urlParams.get('operator');
+
+        let hasil;
+
+        // Hitung hasil berdasarkan operator yang dipilih
+        switch(operator) {
+            case 'tambah':
+                hasil = bilangan1 + bilangan2;
+                break;
+            case 'kurang':
+                hasil = bilangan1 - bilangan2;
+                break;
+            case 'kali':
+                hasil = bilangan1 * bilangan2;
+                break;
+            case 'bagi':
+                if (bilangan2 !== 0) {
+                    hasil = bilangan1 / bilangan2;
+                } else {
+                    hasil = 'Error: Pembagian dengan nol!';
+                }
+                break;
+            default:
+                hasil = 'Operator tidak dikenal';
+        }
+
+        // Tampilkan hasil
+        document.getElementById('hasil').textContent = `Hasil: ${hasil}`;
+    </script>
+</body>
+</html>
