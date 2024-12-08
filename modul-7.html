@@ -16,46 +16,83 @@
         }
         .container {
             background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
-        footer {
-            margin-top: 20px;
-            font-weight: bold;
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-control, .btn {
+            border-radius: 10px;
         }
         label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input, select, button {
+            font-weight: bold;
             margin-bottom: 10px;
         }
-      </style>
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            font-weight: bold;
+            width: 100%;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        footer {
+            margin-top: 30px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+        .day-item {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .card {
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Jurnal Belajar PHP</h1>
+        <h1>Belajar PHP</h1>
         <div id="days-list"></div>
 
-        <h2>Formulir Perhitungan</h2>
-    <form action="result.html" method="get">
-        <label for="bilangan1">Bilangan 1:</label>
-        <input type="number" id="bilangan1" name="bilangan1" required>
+        <h2>Kalkulator Perhitungan</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="result.html" method="get">
+                    <div class="form-group">
+                        <label for="bilangan1">Bilangan 1:</label>
+                        <input type="number" id="bilangan1" name="bilangan1" class="form-control" required>
+                    </div>
 
-        <label for="bilangan2">Bilangan 2:</label>
-        <input type="number" id="bilangan2" name="bilangan2" required>
+                    <div class="form-group">
+                        <label for="bilangan2">Bilangan 2:</label>
+                        <input type="number" id="bilangan2" name="bilangan2" class="form-control" required>
+                    </div>
 
-        <label for="operator">Pilih Operasi:</label>
-        <select id="operator" name="operator" required>
-            <option value="tambah">Tambah</option>
-            <option value="kurang">Kurang</option>
-            <option value="kali">Kali</option>
-            <option value="bagi">Bagi</option>
-        </select>
+                    <div class="form-group">
+                        <label for="operator">Pilih Operasi:</label>
+                        <select id="operator" name="operator" class="form-control" required>
+                            <option value="tambah">Tambah</option>
+                            <option value="kurang">Kurang</option>
+                            <option value="kali">Kali</option>
+                            <option value="bagi">Bagi</option>
+                        </select>
+                    </div>
 
-        <button type="submit">Hitung</button>
-    </form>
+                    <button type="submit" class="btn btn-primary">Hitung</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -71,4 +108,3 @@
     </script>
 </body>
 </html>
-  
