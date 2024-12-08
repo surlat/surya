@@ -93,6 +93,23 @@
                 </form>
             </div>
         </div>
+        <h2>Login</h2>
+
+        <!-- Form login -->
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-login">Login</button>
+        </form>
+
+        <!-- Alert untuk status login -->
+        <div id="login-status" class="alert mt-3"></div>
     </div>
 
     <script>
@@ -105,6 +122,43 @@
             dayItem.textContent = `Ini adalah hari ke-${i} belajar PHP`;
             daysList.appendChild(dayItem);
         }
+        // ID dan password yang benar
+        const correctUsername = "admin";
+        const correctPassword = "password123";
+
+        // Ambil elemen form dan status alert
+        const loginForm = document.getElementById('login-form');
+        const loginStatus = document.getElementById('login-status');
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah form melakukan refresh halaman
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Reset status alert
+            loginStatus.classList.remove('alert-danger', 'alert-success');
+            loginStatus.style.display = 'none';
+
+            // Cek apakah input lengkap
+            if (!username || !password) {
+                loginStatus.classList.add('alert-danger');
+                loginStatus.textContent = 'Input tidak lengkap! Harap isi username dan password.';
+                loginStatus.style.display = 'block';
+                return;
+            }
+
+            // Cek apakah username dan password sesuai
+            if (username === correctUsername && password === correctPassword) {
+                loginStatus.classList.add('alert-success');
+                loginStatus.textContent = 'Login sukses! Selamat datang.';
+                loginStatus.style.display = 'block';
+            } else {
+                loginStatus.classList.add('alert-danger');
+                loginStatus.textContent = 'Login gagal! Username atau password salah.';
+                loginStatus.style.display = 'block';
+            }
+        });
     </script>
 </body>
 </html>
