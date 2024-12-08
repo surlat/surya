@@ -22,28 +22,35 @@
         const bilangan2 = parseFloat(urlParams.get('bilangan2'));
         const operator = urlParams.get('operator');
 
+        console.log(bilangan1, bilangan2, operator); // Debugging: Cek parameter yang diterima
+
         let hasil;
 
-        // Hitung hasil berdasarkan operator yang dipilih
-        switch(operator) {
-            case 'tambah':
-                hasil = bilangan1 + bilangan2;
-                break;
-            case 'kurang':
-                hasil = bilangan1 - bilangan2;
-                break;
-            case 'kali':
-                hasil = bilangan1 * bilangan2;
-                break;
-            case 'bagi':
-                if (bilangan2 !== 0) {
-                    hasil = bilangan1 / bilangan2;
-                } else {
-                    hasil = 'Error: Pembagian dengan nol!';
-                }
-                break;
-            default:
-                hasil = 'Operator tidak dikenal';
+        // Validasi apakah parameter ada dan bisa dihitung
+        if (isNaN(bilangan1) || isNaN(bilangan2)) {
+            hasil = 'Error: Bilangan tidak valid!';
+        } else {
+            // Hitung hasil berdasarkan operator yang dipilih
+            switch(operator) {
+                case 'tambah':
+                    hasil = bilangan1 + bilangan2;
+                    break;
+                case 'kurang':
+                    hasil = bilangan1 - bilangan2;
+                    break;
+                case 'kali':
+                    hasil = bilangan1 * bilangan2;
+                    break;
+                case 'bagi':
+                    if (bilangan2 !== 0) {
+                        hasil = bilangan1 / bilangan2;
+                    } else {
+                        hasil = 'Error: Pembagian dengan nol!';
+                    }
+                    break;
+                default:
+                    hasil = 'Operator tidak dikenal';
+            }
         }
 
         // Tampilkan hasil
